@@ -1,0 +1,126 @@
+<!DOCTYPE html>  
+<html>  
+  
+<head>  
+	<meta lang="sl-SI" charset="UTF-8">
+	<link rel="stylesheet" href="nike.css">
+    <title>  
+        Nike
+    </title>  
+</head>  
+  
+<body onclick="myFun()" onkeyup="myFun2()">
+	<div id="page" >
+		<div id="kkk">
+			<canvas id="ooga" height="400pt" width="800pt"></canvas>
+			<svg id="klux" width="800pt" height="400pt" viewBox=" 0 300 800 200" xmlns="http://www.w3.org/2000/svg">
+			<path style="stroke:#FFFFFF;stroke-width:3;fill-rule:evenodd;fill:rgb(50%,0%,50%);fill-opacity:1;" d="M 177.390625 296.652344 C 136.378906 344.8125 97.058594 404.535156 96.664062 449.175781 C 96.511719 465.972656 101.875 480.636719 114.734375 491.742188 C 133.246094 507.738281 153.640625 513.378906 173.9375 513.410156 C 203.59375 513.453125 233.042969 501.488281 256.105469 492.261719 C 294.9375 476.730469 724.21875 290.3125 724.21875 290.3125 C 728.359375 288.234375 727.585938 285.648438 722.402344 286.941406 C 720.308594 287.464844 255.0625 413.546875 255.0625 413.546875 C 246.25 416.039062 237.144531 417.34375 227.984375 417.421875 C 192.230469 417.632812 160.414062 397.789062 160.671875 355.964844 C 160.769531 339.601562 165.78125 319.867188 177.390625 296.652344 Z M 177.390625 296.652344 "/>
+			<!--<g fill="#990033" stroke="#FFFFFF">
+				<path  stroke-width="4" d="
+					M 160 40 
+					C110 120, 130 180, 225 155 
+					L 755 15
+					L 200 250
+					C20 300,40 150, 160 40"/>
+			</g>-->
+		</svg>
+		</div>
+	</div>
+	<br>
+	
+	<div class="background-container" >
+	<img id="moon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="clouds"></div>
+	</div>
+	<script type="text/javascript">
+		var c = document.getElementById("ooga");
+		var ctx = c.getContext("2d");
+		ctx.translate(0,-250);
+		var cl="#FFFFFF";
+		var id = setInterval(frame, 10);
+		var lw="4";
+		var a=5.0;
+		var b=0.1;
+		var t=0.00;
+		var x=0; var y=0;
+		function frame() {
+		  if (false) {
+			clearInterval(id);
+		  } else {
+			ctx.scale(1,1);
+			ctx.beginPath();
+			ctx.lineWidth=a;
+			ctx.lineJoin = "round";
+			ctx.moveTo(177.0,296.0);
+			x=pow((1−t),2)*x1 + 2*(1−t)*t*x2 + pow(t,2)*x3;
+			y=pow((1−t),2)*y1 + 2*(1−t)*t*y2 + pow(t,2)*y3;
+			ctx.bezierCurveTo(136.0,344.0,97.0,404.0,96.0,449.0);
+			ctx.bezierCurveTo(96.0,465.0,101.0,480.0,114.0,491.0);
+			ctx.bezierCurveTo(133.0,507.0,153.0,513.0,173.0,513.0);
+			ctx.bezierCurveTo(203.0,513.0,233.0,501.0,256.0,492.0);
+			ctx.bezierCurveTo(294.0,476.0,724.0,290.0,724.0,290.0);
+			ctx.bezierCurveTo(728.0,288.0,727.0,285.0,722.0,286.0);
+			ctx.bezierCurveTo(720.0,287.0,255.0,413.0,255.0,413.0);
+			ctx.bezierCurveTo(246.0,416.0,237.0,417.0,227.0,417.0);
+			ctx.bezierCurveTo(192.0,417.0,160.0,397.0,160.0,355.0);
+			ctx.bezierCurveTo(160.0,339.0,165.0,319.0,177.0,296.0);
+			ctx.fillStyle="#FF0000";
+			ctx.fill();
+			ctx.strokeStyle=cl;
+			ctx.stroke();
+			if(a>8){b=-0.1;}
+			else if(a<2){b=0.1;}
+			a=a+b;
+		  }
+		}
+		ctx.closePath();
+		document.addEventListener('keyup', function (event) {
+			if (event.defaultPrevented) {
+				return;
+			}
+
+			var key = event.key || event.keyCode;
+	
+			if (key === 'b') {
+				cl="#0000ff";
+			}
+			if(key === 'g')
+			{
+				cl="#00ff00";
+			}
+			if(key === 'r')
+			{
+				cl="#ff0000";
+			}
+			if(key === 'a')
+			{
+				cl="#FFFFFF";
+			
+		}});
+		
+		
+	</script>
+	<script type="text/javascript">
+		var x=0;
+		function myFun(){
+			if(x==0){
+				document.getElementById("ooga").style.display = "block";
+				document.getElementById("klux").style.display = "none";
+			}
+			if(x==1){
+				document.getElementById("ooga").style.display = "none";
+				document.getElementById("klux").style.display = "block";
+			}
+			if(x==0){
+				x=1;
+			}
+			else{
+				x=0;
+			}
+		}
+	</script>
+</body>  
+  
+</html> 

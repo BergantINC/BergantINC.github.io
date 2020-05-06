@@ -1,0 +1,10 @@
+<svg id="klux" xmlns="http://www.w3.org/2000/svg">
+			<g fill="#000000" stroke="#000000">
+				<path  stroke-width="4" d="
+					M 160 40 
+					C110 120, 130 180, 225 155 
+					L 755 15
+					L 200 250
+					C20 300,40 150, 160 40"/>
+			</g>
+</svg>

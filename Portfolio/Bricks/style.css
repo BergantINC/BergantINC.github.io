@@ -1,0 +1,90 @@
+* { 
+	padding: 0; 
+	margin: 0; 
+	
+}
+html{
+	background: url("images/bmdWT1.gif");
+	background-size: cover;
+	will-change: transform;
+}
+.gif {
+    -webkit-transform: rotateX(0);
+}
+
+canvas { 
+	background: #eee; 
+	display: block; 
+	margin: 0 auto; 
+}
+p{
+	text-align:center;
+	font-size: 256px;
+	/*margin-top: 50px;*/
+	font-family: "Arial Black", Gadget, sans-serif;
+	background: -webkit-linear-gradient(#DAA520, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.buttons{
+	text-align:center;
+	line-height:40px;
+	font-size: 26px;
+	background: linear-gradient(to bottom, #D4AF37, black);
+	cursor:pointer;
+	transition:0.5s;
+	box-shadow: 5px 6px #000000;
+}
+#Menu { 
+	margin: 0 auto;
+	width: 600px;
+	height: 400px;
+}
+#Start{
+	width: 140px;
+	height: 40px;
+	border: 1px solid black;
+	margin: 30px auto;
+	margin-top: 100px;
+}
+#Start2{
+	width: 140px;
+	height: 40px;
+	border: 1px solid black;
+	margin: 30px auto;
+	margin-top: 100px;
+}
+#Options{
+	width: 140px;
+	height: 40px;
+	border: 1px solid black;
+	margin: 30px auto;
+}
+#Quit{
+	width: 140px;
+	height: 40px;
+	border: 1px solid black;
+	margin: 30px auto;
+}
+#Instructions{
+	margin-top:50px;
+	margin-left:50px;
+	width: 500px;
+	height: 500px;
+	line-height:100px;
+	text-align:center;
+	font-size: 35px;
+	color:yellow;
+	background: black;
+	cursor:pointer;
+	border: 2px solid green;
+}
+.buttons:hover{
+	transform: translateY(5px);
+	box-shadow:none;
+}
+.buttons:active{
+	box-shadow:2px 2px 2px 2px #00ff00;
+	-webkit-box-shadow:2px 2px 2px 2px #00ff00;
+	-moz-box-shadow:2px 2px 2px 2px #00ff00;
+}
